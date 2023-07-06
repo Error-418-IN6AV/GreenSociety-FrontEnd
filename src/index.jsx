@@ -5,6 +5,8 @@ import { NotFoundPage } from './pages/NotFoundPage';
 import { HomePage } from './pages/HomePage';
 import { UpdateDonacion } from './pages/donacion/UpdateDonacion';
 import { DonacionPage } from './pages/donacion/DonacionPage';
+import { UpdateDetalle } from './pages/detalleDonacion/UpdateDetalle';
+import { DetallePage } from './pages/detalleDonacion/DetallePage';
 
 export const AuthContext = createContext();
 export const Index = () => {
@@ -37,6 +39,14 @@ export const Index = () => {
     {
       path: '/donacion',
       element: <DonacionPage/>
+    },
+    {
+      path: '/updatedetalle/:id',
+      element: <UpdateDetalle/>
+    },
+    {
+      path: '/detalle',
+      element: <DetallePage/>
     }
   ])
   

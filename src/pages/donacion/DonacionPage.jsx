@@ -3,7 +3,7 @@ import axios from 'axios'
 import { CardDonacion } from './CardDonacion'
 import { useEffect, useState } from 'react'
 import { Link, useParams,useNavigate } from 'react-router-dom'
-import { Box, Modal, Typography } from '@mui/material'
+//import { Box, Modal, Typography } from '@mui/material'
 export const DonacionPage = () => {
     const [donations, setDonaciones] = useState([{}])
     const [detalleDonaciones, setDetalleDonaciones] = useState([{}])
@@ -18,7 +18,7 @@ export const DonacionPage = () => {
       'Authorization': localStorage.getItem('token')
     } 
 
-    const form = {
+    /* const form = {
         position: 'absolute',
         top: '50%',
         left: '50%',
@@ -28,14 +28,14 @@ export const DonacionPage = () => {
         border: '2px solid #000',
         boxShadow: 24,
      
-      };
+      }; */
 
       const getUser = async()=>{
         try{
           const { data } = await axios('http://localhost:3000/user/get'/* , {headers: headers} */)
-          if(data.user){
-            setUsers(data.user)
-            console.log(data.user)
+          if(data.users){
+            setUsers(data.users)
+            console.log(data.users)
           }
         }catch(err){
           console.log(err);
@@ -46,9 +46,9 @@ export const DonacionPage = () => {
       const getDetails = async()=>{
         try{
           const { data } = await axios('http://localhost:3000/detalledonaciones/gets', {headers: headers})
-          if(data.detalleDonacines){
-            setDetalleDonaciones(data.detalleDonacines)
-            console.log(data.detalleDonacines)
+          if(data.detalleDonaciones){
+            setDetalleDonaciones(data.detalleDonaciones)
+            console.log(data.detalleDonaciones)
           }
         }catch(err){
           console.log(err);
@@ -71,7 +71,7 @@ export const DonacionPage = () => {
 
       const getsToMy = async()=>{
         try{
-          const { data } = await axios('http://localhost:3000/donaciones/getToMy', {headers: headers})
+          const { data } = await axios('http://localhost:3000/donaciones/getToMe', {headers: headers})
           if(data.donations){
             setDonaciones(data.donations)
             console.log(data.donations)
@@ -86,7 +86,6 @@ export const DonacionPage = () => {
         try {
             let donations = {
                 monto: document.getElementById('inputMonto').value,
-                noCuenta: document.getElementById('inputNoCuenta').value,
                 beneficiario: document.getElementById('inputBeneficiario').value,
                 detalleDonacion: document.getElementById('inputDetalle').value
             }
@@ -98,11 +97,11 @@ export const DonacionPage = () => {
         }
       }
 
-      const deleteDonacion = async(_id) => {
+      const deleteDonaciones = async(id) => {
         try{
           let confirmDelete = confirm('Are you sure to delete this donation?')
             if(confirmDelete){
-                const { data } = await axios.delete(`http://localhost:3000/donaciones/delete/${_id}`,  {headers: headers} )
+                const { data } = await axios.delete(`http://localhost:3000/donaciones/delete/${id}`,  {headers: headers} )
                 getsMy()
                 alert(`${data.message}: ${data.deletedDonation}`)
             }
@@ -111,8 +110,8 @@ export const DonacionPage = () => {
         }
       }
 
-      const updatePage = (_id)=>{
-        navigate(`/updateDonacion/${_id}`)
+      const updatePage = (id)=>{
+        navigate(`/updateDonacion/${id}`)
       }
 
       const addIt = async () => {
@@ -120,7 +119,7 @@ export const DonacionPage = () => {
         add();
       }
     
-      useEffect(()=> {getsMy(); /* getsToMy(); */ getDetails(); getUser();}, [])
+      useEffect(()=> {getsMy();  /* getsToMy(); */  getDetails(); getUser();}, [])
   return (
     <>
     <main>
@@ -134,36 +133,31 @@ export const DonacionPage = () => {
 </svg> Donations </h1> 
       </div>
       <div>
-        <button onClick={Open} className="btn btn-success mb-2 btn-lg"><i className="fa-solid fa-door-closed"></i> Make a donation</button>
+      <button type="button" className="btn btn-success mb-2 btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+      Make a donation
+                </button>
       </div>
       <div>
-        <button className="btn btn-success mb-2 btn-lg"><i className="fa-solid fa-door-closed"></i> My Donations</button>
-        <button className="btn btn-success mb-2 btn-lg"><i className="fa-solid fa-door-closed"></i> Donations to me</button>
+        <button onClick={() =>getsMy()} className="btn btn-success mb-2 btn-lg"><i className="fa-solid fa-door-closed"></i> My Donations</button>
+        <button onClick={() =>getsToMy()} className="btn btn-success mb-2 btn-lg"><i className="fa-solid fa-door-closed"></i> Donations to me</button>
       </div>
       </center>
-      <Modal
-        open={open}
-        onClose={close}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
+      {/* Empieza el modal */}
+      <div className="modal fade" id="exampleModal1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title" id="exampleModalLabel">Make a donation</h5>
+                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div className="modal-body">
+                                <form id="formAdd">
 
-        <Box sx={form}>
-        <div  className="card-body p-4 p-sm-5">
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Add Donation
-          </Typography>
-          <Typography component={'div'} id="modal-modal-description" sx={{ mt: 2 }} >
-            <form>
-            <div className="form-floating mb-3">
+                                <div className="form-floating mb-3">
               <input type="text" name="inputMonto" className="form-control" id="inputMonto" placeholder="." />
                 <label htmlFor="floatingInput">Monto</label>
               </div>
-              <div className="form-floating mb-3">
-              <input type="text" name="inputNoCuenta" className="form-control" id="inputNoCuenta" placeholder="." />
-                <label htmlFor="floatingInput">No Cuenta</label>
-              </div>
-              <div className="form-floating mb-3">
+              <div className="mb-3">
               <label htmlFor="inputBeneficiario" className="form-label">Beneficiario</label>
                 <select className="form-control" id="inputBeneficiario">
                         {
@@ -175,7 +169,7 @@ export const DonacionPage = () => {
                         }
                     </select>
               </div>
-              <div className="form-floating mb-3">
+              <div className="mb-3">
               <label htmlFor="inputDetalle" className="form-label">Detalle Donacion</label>
                 <select className="form-control" id="inputDetalle">
                         {
@@ -187,35 +181,32 @@ export const DonacionPage = () => {
                         }
                     </select>
               </div>
-              <div className="d-grid">
-                <button onClick={() =>addIt()} className="btn btn-primary btn-login text-uppercase fw-bold" type="submit"  >ADD</button>
-              </div>
+              
               <hr className="my-4" />
-              <div className="d-grid mb-2">
-                <button onClick={close} className="btn btn-google btn-login text-uppercase fw-bold" type="submit">
-                  <i className="fab  me-2"></i> CANCEL
-                </button>
-              </div>
-            </form>
-          </Typography>
-          </div>
-        </Box>
-      </Modal>
+                                </form>
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button onClick={add} type="button" className="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br /><br />
    
       <div className="row g-0 justify-content-center">
         {
-          donations.map(({ _id, date, monto, noCuenta, donante, beneficiario, detalleDonacion}, i) => {
+          donations.map(({ id, date, monto, donante, beneficiario, detalleDonacion, get, deleteDonacion}, i) => {
             return (
               <CardDonacion
                 key={i}
                 date={date}
                 monto={monto}
-                noCuenta={noCuenta}
-                donante={donante}
-                beneficiario={beneficiario}
-                detalleDonacion={detalleDonacion}
-                get={() =>updatePage(_id)}
-                deleteDonacion={() => deleteDonacion(_id)}
+                donante={donante?.name}
+                beneficiario={beneficiario?.name}
+                detalleDonacion={detalleDonacion?.causa}
+                get={() =>updatePage(id)}
+                deleteDonacion={() => deleteDonaciones(id)}
               ></CardDonacion>
             )
           })
