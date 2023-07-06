@@ -22,7 +22,6 @@ export const UpdateDonacion = () => {
   const close = ()=>{
     navigate('/donacion')
   }
-
   const getUser = async()=>{
     try{
       const { data } = await axios('http://localhost:3000/user/get', users/* , {headers: headers} */)

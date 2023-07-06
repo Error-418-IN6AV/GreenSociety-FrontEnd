@@ -18,12 +18,6 @@ export const UpdateDetalle = () => {
     navigate('/detalle')
    }
 
-   const close = ()=>{
-    navigate('/detalle')
-
-}
-
-
     const get = async()=>{
         try{
           const { data } = await axios(`http://localhost:3000/detalledonaciones/get/${id}` ,{ headers: headers })

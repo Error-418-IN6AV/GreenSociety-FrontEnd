@@ -3,32 +3,17 @@ import axios from 'axios'
 import { CardDonacion } from './CardDonacion'
 import { useEffect, useState } from 'react'
 import { Link, useParams,useNavigate } from 'react-router-dom'
-//import { Box, Modal, Typography } from '@mui/material'
 export const DonacionPage = () => {
     const [donations, setDonaciones] = useState([{}])
     const [detalleDonaciones, setDetalleDonaciones] = useState([{}])
     const [user, setUsers] = useState([{}])
     const [open, setOpen] = useState(false);
-    const Open = () => setOpen(true);
-    const OpenUpdate = (id) => setOpenUpdate(true);
     const close = () => setOpen(false);
     const navigate = useNavigate();
     const headers = {
       'Content-Type': 'application/json',
       'Authorization': localStorage.getItem('token')
     } 
-
-    /* const form = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 500,
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
-        boxShadow: 24,
-     
-      }; */
 
       const getUser = async()=>{
         try{
@@ -112,11 +97,6 @@ export const DonacionPage = () => {
 
       const updatePage = (id)=>{
         navigate(`/updateDonacion/${id}`)
-      }
-
-      const addIt = async () => {
-        close();
-        add();
       }
     
       useEffect(()=> {getsMy();  /* getsToMy(); */  getDetails(); getUser();}, [])
