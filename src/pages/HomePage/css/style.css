@@ -1,75 +1,4 @@
-/**
-* Template Name: Arsha
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
-}
-.text-primary-1{
-  color: #444444;
-}
-.testimonial-carousel .owl-item img {
-  width: 100px;
-  height: 100px;
-}
-
-.testimonial-carousel .owl-nav {
-  margin-top: 30px;
-  display: flex;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-  margin-right: 15px;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  background: var(--light);
-  border-radius: 4px;
-  font-size: 22px;
-  transition: .5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-  background: var(--primary);
-  color: var(--light);
-}
-
-
-a {
-  color: #47e4a0;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #20ad43;
-  text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Jost", sans-serif;
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
 #preloader {
   position: fixed;
   top: 0;
@@ -179,11 +108,11 @@ h6 {
 /**
 * Desktop Navigation 
 */
-.navbar {
+.navbar4  {
   padding: 0;
 }
 
-.navbar ul {
+.navbar4  ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -191,12 +120,12 @@ h6 {
   align-items: center;
 }
 
-.navbar li {
+.navbar4  li {
   position: relative;
 }
 
-.navbar a,
-.navbar a:focus {
+.navbar4  a,
+.navbar4  a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -208,22 +137,22 @@ h6 {
   transition: 0.3s;
 }
 
-.navbar a i,
-.navbar a:focus i {
+.navbar4  a i,
+.navbar4  a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
 
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover>a {
+.navbar4  a:hover,
+.navbar4  .active,
+.navbar4  .active:focus,
+.navbar4  li:hover>a {
   color: #47e49d;
 }
 
-.navbar .getstarted,
-.navbar .getstarted:focus {
+.navbar4  .getstarted,
+.navbar4  .getstarted:focus {
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 50px;
@@ -234,8 +163,8 @@ h6 {
   font-weight: 600;
 }
 
-.navbar .getstarted:hover,
-.navbar .getstarted:focus:hover {
+.navbar4  .getstarted:hover,
+.navbar4  .getstarted:focus:hover {
   color: #1d0303;
   background: #47e4d7;
 }
@@ -245,13 +174,13 @@ h6 {
 * Mobile Navigation 
 */
 
-.navbar-toggler .navbar-collapse  a:hover,
-.navbar-toggler .navbar-collapse  .active,
-.navbar-toggler .navbar-collapse  li:hover>a {
+.navbar4 -toggler .navbar4 -collapse  a:hover,
+.navbar4 -toggler .navbar4 -collapse  .active,
+.navbar4 -toggler .navbar4 -collapse  li:hover>a {
   color: #13a068;
 }
 
-.navbar-toggler{
+.navbar4-toggler{
   background: #13a068;
 }
 
@@ -387,56 +316,7 @@ h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-section {
-  padding: 60px 0;
-  overflow: hidden;
-}
 
-.section-bg {
-  background-color: #f3f5fa;
-  
-}
-
-.section-title {
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-.section-title h2 {
-  font-size: 32px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
-  color: #275c36;
-}
-
-.section-title h2::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 120px;
-  height: 1px;
-  background: #ddd;
-  bottom: 1px;
-  left: calc(50% - 60px);
-}
-
-.section-title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #041e2a;
-  bottom: 0;
-  left: calc(50% - 20px);
-}
-
-.section-title p {
-  margin-bottom: 0;
-}
 
 /*--------------------------------------------------------------
 # Clients
@@ -464,6 +344,54 @@ section {
   .clients img {
     max-width: 40%;
   }
+}
+
+
+
+#clients-bg {
+  background-color: #f3f5fa;
+  
+}
+
+#clients-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#clients-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #275c36;
+}
+
+#clients-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+#clients-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #041e2a;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+#clients-title p {
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -522,7 +450,56 @@ section {
   color: #fff;
   text-decoration: none;
 }
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
 
+.section-bg {
+  background-color: #f3f5fa;
+  
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #275c36;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #041e2a;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/

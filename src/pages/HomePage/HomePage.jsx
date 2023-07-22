@@ -30,69 +30,68 @@ export const HomePage = () => {
           </h1>
           {/* Uncomment below if you prefer to use an image logo */}
           {/* <a href="index.html" className="logo me-auto"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>*/}
-         <nav id="navbar" className="navbar navbar-expand-lg ">
-           <div className="container-fluid">
-           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          <nav id="navbar" className="navbar4 navbar-expand-lg ">
+            <div className="container-fluid">
+              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
               <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-             <li className="nav-item">
-                <a className="nav-Link scrollto active" href="#hero">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-Link scrollto" href="#about">
-                  About
-                </a>
-              </li>
-               <li className="nav-item">
-                <a className="nav-Link scrollto" href="#services">
-                ¿Qué buscamos?
-                </a>
-              </li>
-          <li className="nav-item">
-                <a className="nav-Link   scrollto" href="#portfolio">
-                  Portfolio
-                </a>
-              </li>
-           <li className="nav-item">
-                <a className="nav-Link scrollto" href="#team">
-                Testimonials
-                </a>
-              </li>
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <a className="nav-Link scrollto active" href="#hero">
+                      Home
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-Link scrollto" href="#about">
+                      About
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-Link scrollto" href="#services">
+                      ¿Qué buscamos?
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-Link   scrollto" href="#portfolio">
+                      Portfolio
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-Link scrollto" href="#team">
+                      Testimonials
+                    </a>
+                  </li>
 
-            <li className="nav-item">
-                <a className="nav-Link scrollto" href="#contact">
-                  Contact
-                </a>
-              </li>
-          <li className="nav-item">
-                  <Link to='login'>
-              <div className="getstarted scrollto">
-                  Get Started
-                </div>
-                </Link>
+                  <li className="nav-item">
+                    <a className="nav-Link scrollto" href="#contact">
+                      Contact
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <Link to='login'>
+                      <div className="getstarted scrollto">
+                        Get Started
+                      </div>
+                    </Link>
 
-              </li>
-          <li className="nav-item">
-              <Link to='register'>
-              <div className="getstarted scrollto" >
-                  Register
-                </div>
-                </Link>
-            </li>
-            </ul>
-            </div>
-            <i className="bi bi-list mobile-nav-toggle" />
+                  </li>
+                  <li className="nav-item">
+                    <Link to='register'>
+                      <div className="getstarted scrollto" >
+                        Register
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <i className="bi bi-list mobile-nav-toggle" />
             </div>
           </nav>
 
-r
 
 
-        </div> 
+        </div>
       </header>
       {/* End Header */}
       {/* ======= Hero Section ======= */}
@@ -109,11 +108,11 @@ r
                 Somos un grupo de personas que buscamos el bienestar de nuestra comunidad, y tenemos la prioridad de velar por un mejor futuro.
               </h2>
               <div className="d-flex justify-content-center justify-content-lg-start">
-               
-              <Link to='login'>
-                <div className="btn-get-started scrollto">
-                  Get Started
-                </div>
+
+                <Link to='login'>
+                  <div className="btn-get-started scrollto">
+                    Get Started
+                  </div>
                 </Link>
 
               </div>
@@ -244,7 +243,7 @@ r
                         data-bs-target="#accordion-list-1"
                       >
                         <span>01</span>Concientizar{" "}
-     
+
                       </a>
                       <div
                         id="accordion-list-1"
@@ -263,7 +262,7 @@ r
                         className="collapsed"
                       >
                         <span>02</span> Reforestar{" "}
-                
+
                       </a>
                       <div
                         id="accordion-list-2"
@@ -282,7 +281,7 @@ r
                         className="collapsed"
                       >
                         <span>03</span> Priorizar{" "}
-            
+
                       </a>
                       <div
                         id="accordion-list-3"
@@ -360,8 +359,7 @@ r
         <section id="services" className="services section-bg">
           <div className="container" data-aos="fade-up">
             <div className="section-title">
-            <h2>¿Qué buscamos?</h2>
-
+              <h2>¿Qué buscamos?</h2>
 
             </div>
             <div className="row">
@@ -503,12 +501,12 @@ r
             >
               <div className="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div className="portfolio-img">
-                <a className="btn"data-bs-toggle="modal" href="#exampleModalToggle" role="button">
-                  <img
-                    src="src/assets/img/Reforestacion.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                  <a className="btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                    <img
+                      src="src/assets/img/Reforestacion.jpg"
+                      className="img-fluid"
+                      alt=""
+                    />
                   </a>
                 </div>
 
@@ -516,280 +514,280 @@ r
               </div>
               <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div className="portfolio-img">
-                <a className="btn"data-bs-toggle="modal" href="#exampleModalToggle2" role="button">
-                  <img
-                    src="src/assets/img/Recoger basura.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                  <a className="btn" data-bs-toggle="modal" href="#exampleModalToggle2" role="button">
+                    <img
+                      src="src/assets/img/Recoger basura.jpg"
+                      className="img-fluid"
+                      alt=""
+                    />
                   </a>
                 </div>
 
               </div>
               <div className="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div className="portfolio-img">
-                <a className="btn"data-bs-toggle="modal" href="#exampleModalToggle3" role="button">
-                  <img
-                    src="src/assets/img/Reciclar Botellas.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                  <a className="btn" data-bs-toggle="modal" href="#exampleModalToggle3" role="button">
+                    <img
+                      src="src/assets/img/Reciclar Botellas.jpg"
+                      className="img-fluid"
+                      alt=""
+                    />
                   </a>
                 </div>
 
               </div>
               <div className="col-lg-4 col-md-6 portfolio-item filter-card">
                 <div className="portfolio-img">
-                <a className="btn"data-bs-toggle="modal" href="#exampleModalToggle4" role="button">
-                  <img
-                    src="src/assets/img/Reciclaje.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                  <a className="btn" data-bs-toggle="modal" href="#exampleModalToggle4" role="button">
+                    <img
+                      src="src/assets/img/Reciclaje.jpg"
+                      className="img-fluid"
+                      alt=""
+                    />
                   </a>
                 </div>
 
               </div>
               <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div className="portfolio-img">
-                <a className="btn"data-bs-toggle="modal" href="#exampleModalToggle5" role="button">
-                  <img
-                    src="src/assets/img/Plantar Arboles.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                  <a className="btn" data-bs-toggle="modal" href="#exampleModalToggle5" role="button">
+                    <img
+                      src="src/assets/img/Plantar Arboles.jpg"
+                      className="img-fluid"
+                      alt=""
+                    />
                   </a>
                 </div>
 
               </div>
               <div className="col-lg-4 col-md-6 portfolio-item filter-app">
                 <div className="portfolio-img">
-                <a className="btn"data-bs-toggle="modal" href="#exampleModalToggle6" role="button">
-                  <img
-                    src="src/assets/img/planta-de-reciclaje.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                  <a className="btn" data-bs-toggle="modal" href="#exampleModalToggle6" role="button">
+                    <img
+                      src="src/assets/img/planta-de-reciclaje.jpg"
+                      className="img-fluid"
+                      alt=""
+                    />
                   </a>
                 </div>
 
               </div>
               <div className="col-lg-4 col-md-6 portfolio-item filter-card">
                 <div className="portfolio-img">
-                <a className="btn"data-bs-toggle="modal" href="#exampleModalToggle7" role="button">
-                  <img
-                    src="src/assets/img/Guatemala Reciclaje.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                  <a className="btn" data-bs-toggle="modal" href="#exampleModalToggle7" role="button">
+                    <img
+                      src="src/assets/img/Guatemala Reciclaje.jpg"
+                      className="img-fluid"
+                      alt=""
+                    />
                   </a>
                 </div>
 
               </div>
               <div className="col-lg-4 col-md-6 portfolio-item filter-card">
                 <div className="portfolio-img">
-                <a className="btn"data-bs-toggle="modal" href="#exampleModalToggle8" role="button">
-                  <img
-                    src="src/assets/img/Ideas.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                  <a className="btn" data-bs-toggle="modal" href="#exampleModalToggle8" role="button">
+                    <img
+                      src="src/assets/img/Ideas.jpg"
+                      className="img-fluid"
+                      alt=""
+                    />
                   </a>
                 </div>
 
               </div>
               <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div className="portfolio-img">
-                <a className="btn"data-bs-toggle="modal" href="#exampleModalToggle9" role="button">
-                  <img
-                    src="src/assets/img/Arboles.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                  <a className="btn" data-bs-toggle="modal" href="#exampleModalToggle9" role="button">
+                    <img
+                      src="src/assets/img/Arboles.jpg"
+                      className="img-fluid"
+                      alt=""
+                    />
                   </a>
                 </div>
 
               </div>
- <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabIndex="-1">
-  <div className="modal-dialog modal-dialog-centered">
-    <div className="modal-content">
-      <div className="modal-header">
+              <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabIndex="-1">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
 
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-      <img
-                    src="src/assets/img/Reforestacion.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />                 
-      </div>
-      <div className="modal-footer">
-        <button className="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
-  <div className="modal-dialog modal-dialog-centered">
-    <div className="modal-content">
-      <div className="modal-header">
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <img
+                        src="src/assets/img/Reforestacion.jpg"
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="modal-footer">
+                      <button className="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
 
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-      <img
-                    src="src/assets/img/Recoger basura.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
-      </div>
-      <div className="modal-footer">
-        <button className="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
-  <div className="modal-dialog modal-dialog-centered">
-    <div className="modal-content">
-      <div className="modal-header">
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <img
+                        src="src/assets/img/Recoger basura.jpg"
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="modal-footer">
+                      <button className="btn btn-primary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
 
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-      <img
-                    src="src/assets/img/Reciclar Botellas.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
-      </div>
-      <div className="modal-footer">
-        <button className="btn btn-primary" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
-  <div className="modal-dialog modal-dialog-centered">
-    <div className="modal-content">
-      <div className="modal-header">
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <img
+                        src="src/assets/img/Reciclar Botellas.jpg"
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="modal-footer">
+                      <button className="btn btn-primary" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
 
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-      <img
-                    src="src/assets/img/Reciclaje.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
-      </div>
-      <div className="modal-footer">
-        <button className="btn btn-primary" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
-  <div className="modal-dialog modal-dialog-centered">
-    <div className="modal-content">
-      <div className="modal-header">
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <img
+                        src="src/assets/img/Reciclaje.jpg"
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="modal-footer">
+                      <button className="btn btn-primary" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
 
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-      <img
-                    src="src/assets/img/Plantar Arboles.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
-      </div>
-      <div className="modal-footer">
-        <button className="btn btn-primary" data-bs-target="#exampleModalToggle6" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="modal fade" id="exampleModalToggle6" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
-  <div className="modal-dialog modal-dialog-centered">
-    <div className="modal-content">
-      <div className="modal-header">
-  
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-      <img
-                    src="src/assets/img/planta-de-reciclaje.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
-      </div>
-      <div className="modal-footer">
-        <button className="btn btn-primary" data-bs-target="#exampleModalToggle7" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="modal fade" id="exampleModalToggle7" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
-  <div className="modal-dialog modal-dialog-centered">
-    <div className="modal-content">
-      <div className="modal-header">
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <img
+                        src="src/assets/img/Plantar Arboles.jpg"
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="modal-footer">
+                      <button className="btn btn-primary" data-bs-target="#exampleModalToggle6" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="modal fade" id="exampleModalToggle6" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
 
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-      <img
-                    src="src/assets/img/Guatemala Reciclaje.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
-      </div>
-      <div className="modal-footer">
-        <button className="btn btn-primary" data-bs-target="#exampleModalToggle8" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="modal fade" id="exampleModalToggle8" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
-  <div className="modal-dialog modal-dialog-centered">
-    <div className="modal-content">
-      <div className="modal-header">
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <img
+                        src="src/assets/img/planta-de-reciclaje.jpg"
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="modal-footer">
+                      <button className="btn btn-primary" data-bs-target="#exampleModalToggle7" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="modal fade" id="exampleModalToggle7" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
 
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-      <img
-                    src="src/assets/img/Ideas.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
-      </div>
-      <div className="modal-footer">
-        <button className="btn btn-primary" data-bs-target="#exampleModalToggle9" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="modal fade" id="exampleModalToggle9" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
-  <div className="modal-dialog modal-dialog-centered">
-    <div className="modal-content">
-      <div className="modal-header">
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <img
+                        src="src/assets/img/Guatemala Reciclaje.jpg"
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="modal-footer">
+                      <button className="btn btn-primary" data-bs-target="#exampleModalToggle8" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="modal fade" id="exampleModalToggle8" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
 
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-      <img
-                    src="src/assets/img/Arboles.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
-      </div>
-      <div className="modal-footer">
-        <button className="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <img
+                        src="src/assets/img/Ideas.jpg"
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="modal-footer">
+                      <button className="btn btn-primary" data-bs-target="#exampleModalToggle9" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="modal fade" id="exampleModalToggle9" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabIndex="-1">
+                <div className="modal-dialog modal-dialog-centered">
+                  <div className="modal-content">
+                    <div className="modal-header">
+
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                      <img
+                        src="src/assets/img/Arboles.jpg"
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="modal-footer">
+                      <button className="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </div>
           </div>
@@ -816,7 +814,7 @@ r
                     <h4>Maria Gozales</h4>
                     <span>Gerente</span>
                     <p>
-                    He visto como este proyecto ayuda a muchas personas, la visión que se tiene es muy bueno espero que crezca y se vea el valor de ella
+                      He visto como este proyecto ayuda a muchas personas, la visión que se tiene es muy bueno espero que crezca y se vea el valor de ella
                     </p>
 
                   </div>
@@ -839,9 +837,9 @@ r
                     <h4>Sarah Martinez</h4>
                     <span>Ama de casas</span>
                     <p>
-                    Green Society me ha ayudado a poder darle un mejor futro a mis hijos , gracias a que me proporcionan de trabaja y ayuda
+                      Green Society me ha ayudado a poder darle un mejor futro a mis hijos , gracias a que me proporcionan de trabaja y ayuda
                     </p>
-                    
+
                   </div>
                 </div>
               </div>
@@ -862,9 +860,9 @@ r
                     <h4>Marcos del Cid</h4>
                     <span>Defensor de la Naturaleza</span>
                     <p>
-                    Soy parte de un grupo de personas que se dedica a poder devolverle la vida a distintos territorios, Green Society me ha proporcionado el apoyo para continuar con este proyecto
+                      Soy parte de un grupo de personas que se dedica a poder devolverle la vida a distintos territorios, Green Society me ha proporcionado el apoyo para continuar con este proyecto
                     </p>
-                    
+
                   </div>
                 </div>
               </div>
@@ -885,9 +883,9 @@ r
                     <h4>Jose Lopez</h4>
                     <span>Vecino de Colonia Mariscal</span>
                     <p>
-                    Mi comunidad era afectada por la basura y la contaminación, pero personas de Green Society logro revivir lugares para el uso de la comunidad además que fomento la vida sostenible en nosotros.
+                      Mi comunidad era afectada por la basura y la contaminación, pero personas de Green Society logro revivir lugares para el uso de la comunidad además que fomento la vida sostenible en nosotros.
                     </p>
-                    
+
                   </div>
                 </div>
               </div>
@@ -910,15 +908,15 @@ r
             <div className="faq-list">
               <ul>
                 <li data-aos="fade-up" data-aos-delay={100}>
-                <i className="fa-regular fa-circle-question"></i>{" "}
+                  <i className="fa-regular fa-circle-question"></i>{" "}
                   <a
                     data-bs-toggle="collapse"
                     className="collapse"
                     data-bs-target="#faq-list-1"
                   >
                     ¿Cómo puedo apoyar a la causa?{" "}
-                   <i className="fa-solid fa-arrow-up"></i>
-      <i className="fa-solid fa-arrow-down"></i>
+                    <i className="fa-solid fa-arrow-up"></i>
+                    <i className="fa-solid fa-arrow-down"></i>
                   </a>
                   <div
                     id="faq-list-1"
@@ -927,21 +925,21 @@ r
                   >
                     <p>
                       Tenemos muchas manera de poder hacer que las personas puedan integrarse dentro de ello,
-                       puedes ser un voluntario el cual nos ayude a poder realizar distintas actividades, 
-                       si deseas donar dinero puedes comunicarte y con gusto te responderemos también de la misma manera si deseas donar ya sea , suplementos para plantas, plantas, ropa, terrenos ect.
+                      puedes ser un voluntario el cual nos ayude a poder realizar distintas actividades,
+                      si deseas donar dinero puedes comunicarte y con gusto te responderemos también de la misma manera si deseas donar ya sea , suplementos para plantas, plantas, ropa, terrenos ect.
                     </p>
                   </div>
                 </li>
                 <li data-aos="fade-up" data-aos-delay={200}>
-                <i className="fa-regular fa-circle-question"></i>{" "}
+                  <i className="fa-regular fa-circle-question"></i>{" "}
                   <a
                     data-bs-toggle="collapse"
                     data-bs-target="#faq-list-2"
                     className="collapsed"
                   >
-                  ¿Qué hacen con los terrenos?{" "}
-                   <i className="fa-solid fa-arrow-up"></i>
-      <i className="fa-solid fa-arrow-down"></i>
+                    ¿Qué hacen con los terrenos?{" "}
+                    <i className="fa-solid fa-arrow-up"></i>
+                    <i className="fa-solid fa-arrow-down"></i>
                   </a>
                   <div
                     id="faq-list-2"
@@ -949,20 +947,20 @@ r
                     data-bs-parent=".faq-list"
                   >
                     <p>
-                    Regularmente buscamos que los terrenos sean reforestados esto para ayudar a medio ambiente, pero también buscamos con ello poder concientizar a las personas con estos actos acerca del impacto que tenemos sobre el planeta.
+                      Regularmente buscamos que los terrenos sean reforestados esto para ayudar a medio ambiente, pero también buscamos con ello poder concientizar a las personas con estos actos acerca del impacto que tenemos sobre el planeta.
                     </p>
                   </div>
                 </li>
                 <li data-aos="fade-up" data-aos-delay={300}>
-                <i className="fa-regular fa-circle-question"></i>{" "}
+                  <i className="fa-regular fa-circle-question"></i>{" "}
                   <a
                     data-bs-toggle="collapse"
                     data-bs-target="#faq-list-3"
                     className="collapsed"
                   >
-                   ¿Qué ocurre con el dinero que yo dono?{" "}
-                   <i className="fa-solid fa-arrow-up"></i>
-      <i className="fa-solid fa-arrow-down"></i>
+                    ¿Qué ocurre con el dinero que yo dono?{" "}
+                    <i className="fa-solid fa-arrow-up"></i>
+                    <i className="fa-solid fa-arrow-down"></i>
                   </a>
                   <div
                     id="faq-list-3"
@@ -970,20 +968,20 @@ r
                     data-bs-parent=".faq-list"
                   >
                     <p>
-                    Ese dinero se reparte para distintas actividades, como lo son ayuda para la comunidad, mantenimiento de áreas verdes, promocionar proyectos, compra de distintos utensilios ect.
+                      Ese dinero se reparte para distintas actividades, como lo son ayuda para la comunidad, mantenimiento de áreas verdes, promocionar proyectos, compra de distintos utensilios ect.
                     </p>
                   </div>
                 </li>
                 <li data-aos="fade-up" data-aos-delay={400}>
-                <i className="fa-regular fa-circle-question"></i>{" "}
+                  <i className="fa-regular fa-circle-question"></i>{" "}
                   <a
                     data-bs-toggle="collapse"
                     data-bs-target="#faq-list-4"
                     className="collapsed"
                   >
-                  ¿Cómo puedo ayudar sin necesidad de ser voluntario o donador? 
-                  <i className="fa-solid fa-arrow-up"></i>
-      <i className="fa-solid fa-arrow-down"></i>
+                    ¿Cómo puedo ayudar sin necesidad de ser voluntario o donador?
+                    <i className="fa-solid fa-arrow-up"></i>
+                    <i className="fa-solid fa-arrow-down"></i>
                   </a>
                   <div
                     id="faq-list-4"
@@ -991,20 +989,20 @@ r
                     data-bs-parent=".faq-list"
                   >
                     <p>
-                    Puedes hacer lo promocionado esta idea hacia tus conocidos además que puedes empezar desde tu casa a cambiar tu estilo de vida, puedes encontrar muchas referencias dentro e nuestras redes sociales
+                      Puedes hacer lo promocionado esta idea hacia tus conocidos además que puedes empezar desde tu casa a cambiar tu estilo de vida, puedes encontrar muchas referencias dentro e nuestras redes sociales
                     </p>
                   </div>
                 </li>
                 <li data-aos="fade-up" data-aos-delay={500}>
-                <i className="fa-regular fa-circle-question"></i>{" "}
+                  <i className="fa-regular fa-circle-question"></i>{" "}
                   <a
                     data-bs-toggle="collapse"
                     data-bs-target="#faq-list-5"
                     className="collapsed"
                   >
-                  ¿Dónde más puedo encontrarlos o contactarlos?{" "}
-                   <i className="fa-solid fa-arrow-up"></i>
-      <i className="fa-solid fa-arrow-down"></i>
+                    ¿Dónde más puedo encontrarlos o contactarlos?{" "}
+                    <i className="fa-solid fa-arrow-up"></i>
+                    <i className="fa-solid fa-arrow-down"></i>
                   </a>
                   <div
                     id="faq-list-5"
@@ -1012,7 +1010,7 @@ r
                     data-bs-parent=".faq-list"
                   >
                     <p>
-                    Puedes ir a nuestra sucursal en la ciudad de Guatemala o puedes comunicarte con nosotros por medio de nuestra página web.
+                      Puedes ir a nuestra sucursal en la ciudad de Guatemala o puedes comunicarte con nosotros por medio de nuestra página web.
                     </p>
                   </div>
                 </li>
@@ -1034,22 +1032,22 @@ r
               <div className="col-lg-5 d-flex align-items-stretch">
                 <div className="info">
                   <div className="address">
-                  <i className="fa-solid fa-location-dot fa-2x"></i>
+                    <i className="fa-solid fa-location-dot fa-2x"></i>
                     <h4>Location:</h4>
                     <p>Guatemala City</p>
                   </div>
                   <div className="email">
-                  <i className="fa-solid fa-envelope-open-text fa-2x"></i>
+                    <i className="fa-solid fa-envelope-open-text fa-2x"></i>
                     <h4>Email:</h4>
                     <p>infogreensoiety@green.edu.gt</p>
                   </div>
                   <div className="phone">
-                  <i className="fa-solid fa-mobile-screen-button fa-2x"></i>
-                  <h4>Call:</h4>
-                  <p>+502 2258 2239</p>
+                    <i className="fa-solid fa-mobile-screen-button fa-2x"></i>
+                    <h4>Call:</h4>
+                    <p>+502 2258 2239</p>
                   </div>
 
-                  
+
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.532269122428!2d-90.53854362555973!3d14.625700476462997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a190308858f1%3A0x6795822b2b81d4ac!2sCentro%20Educativo%20T%C3%A9cnico%20Laboral%20KINAL!5e0!3m2!1ses-419!2sgt!4v1687489844798!5m2!1ses-419!2sgt"
                     frameBorder={0}
@@ -1125,7 +1123,7 @@ r
               <div className="col-lg-6">
                 <h4>Correos</h4>
                 <p>
-                Escribe tu correo si quieres más información acerca de este proyecto
+                  Escribe tu correo si quieres más información acerca de este proyecto
                 </p>
                 <form action="" method="post">
                   <input type="email" name="email" />
@@ -1139,16 +1137,16 @@ r
           <div className="container">
             <div className="row">
               <div className="col-lg-3 col-md-6 footer-contact">
-         
+
                 <img
                   src="src/assets/img/Logo.png"
-                /> 
-               
+                />
+
                 <p>
-                   <br />
-       
                   <br />
-                  <strong>Ubication:</strong>Guatemala 
+
+                  <br />
+                  <strong>Ubication:</strong>Guatemala
                   <br />
                   <strong>Phone:</strong> +502 2258 2239
                   <br />
@@ -1200,20 +1198,20 @@ r
               <div className="col-lg-3 col-md-6 footer-links">
                 <h4>Our Social Networks</h4>
                 <p>
-                Tambien puedes comunicarte por los siguientes medios
+                  Tambien puedes comunicarte por los siguientes medios
                 </p>
                 <div className="social-links mt-3">
                   <a href="#" className="twitter">
-                  <i className="fa-brands fa-youtube"></i>
+                    <i className="fa-brands fa-youtube"></i>
                   </a>
                   <a href="#" className="facebook">
-                  <i className="fa-brands fa-twitter"></i>
+                    <i className="fa-brands fa-twitter"></i>
                   </a>
                   <a href="#" className="instagram">
-                  <i className="fa-brands fa-instagram"></i>
+                    <i className="fa-brands fa-instagram"></i>
                   </a>
                   <a href="#" className="instagram">
-                  <i className="fa-brands fa-facebook"></i>
+                    <i className="fa-brands fa-facebook"></i>
                   </a>
 
                 </div>
@@ -1225,8 +1223,8 @@ r
           <div className="copyright">
             © Copyright{" "}
             <strong>
-              <span>                
-          Green Society</span>
+              <span>
+                Green Society</span>
             </strong>
             . All Rights Reserved
           </div>
