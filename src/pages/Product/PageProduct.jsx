@@ -28,7 +28,6 @@ export const PageProduct = () => {
         try {
             e.preventDefault();
             const { data } = await axios.post('http://localhost:3000/product/add', formData)
-            // if (fileName) await axios.put(`http://localhost:3000/product/uploadImage/${data.products._id}`, fileName)
             Swal.fire('Your work has been saved', data.message, 'success')
             getProducts()
             e.target.reset()
@@ -194,11 +193,10 @@ export const PageProduct = () => {
                                     price={price}
                                     stock={stock}
                                     category={category?.name}
+                                    image={image}
                                     deleteProduct={() => deleteProduct(_id)}
-                                    getProduct={() => getProduct(_id)}
 
                                 >
-
                                 </ProductCard>
                             )
 

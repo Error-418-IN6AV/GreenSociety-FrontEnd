@@ -8,6 +8,7 @@ import { NotFoundPage } from './pages/NotFoundPage'
 import { PageCategory } from './pages/Category/PageCategory.jsx'
 import { PageProduct } from './pages/Product/PageProduct.jsx'
 import { UpdateProduct } from './pages/Product/UpdateProduct.jsx'
+import { Image } from './pages/Product/Image.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -28,6 +29,9 @@ const routes = createBrowserRouter([
       },{
         path: 'product/update/:id',
         element: <UpdateProduct></UpdateProduct>
+      },{
+        path: 'product/image/:id',
+        element: <Image></Image>
       }
       ]
   }

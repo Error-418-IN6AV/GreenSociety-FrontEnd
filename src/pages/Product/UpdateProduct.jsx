@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
+import pro from '../../assets/actualizar.png'
 
 export const UpdateProduct = () => {
     const [product, setProduct] = useState({});
@@ -8,7 +9,6 @@ export const UpdateProduct = () => {
 
     const getProduct = async () => {
         try {
-          console.log(id);
           const { data } = await axios.get(`http://localhost:3000/product/getProduct/${id}`);
           console.log(data);
           setProduct(data.product);
@@ -46,7 +46,7 @@ export const UpdateProduct = () => {
                                     <form>
                                         <br />
                                         <div className='form-group text-center'>
-                                            <img src="" alheight="50" width="130" />
+                                            <img src={pro} alheight="50" width="130" />
                                             <br /> <br />
                                             <h6>Update Product</h6>
                                         </div>
