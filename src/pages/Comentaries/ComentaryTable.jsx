@@ -10,7 +10,8 @@ export const ComentaryTable = () => {
   const [foro, setForo] = useState({});
   const [editingCommentId, setEditingCommentId] = useState(null);
   const [updatedDescription, setUpdatedDescription] = useState('');
-  
+  const [likedCommentIds, setLikedCommentIds] = useState([]);
+  const [dislikedCommentIds, setdisLikedCommentIds] = useState([]);
   const navigate = useNavigate();
 
   const headers = {
@@ -85,20 +86,39 @@ export const ComentaryTable = () => {
   };
 
 
-  const addLike = async (id) => {
-    try {
-      const { data } = await axios.put(`http://localhost:3000/comment/updateLike/${id}`, null);
-      fetchComments();
-    } catch (err) {
-      console.error(err);
+const addLike = async (id) => {
+  try {
+    // Verificar si el comentario ya ha sido dado like
+    if (likedCommentIds.includes(id)) {
+  
+      return;
     }
-  };
 
+    const { data } = await axios.put(`http://localhost:3000/comment/updateLike/${id}`, null, {
+      headers: { Authorization: localStorage.getItem('token') },
+      withCredentials: true,
+    });
+    fetchComments();
+    setLikedCommentIds([...likedCommentIds, id]); // Agregar el ID del comentario al estado local de comentarios con like
+  } catch (err) {
+    console.error(err);
+  }
+};
 
   const addDislike = async (id) => {
     try {
-      const { data } = await axios.put(`http://localhost:3000/comment/updateDislike/${id}`, null);
+      // Verificar si el comentario ya ha sido dado dislike
+      if (dislikedCommentIds.includes(id)) {
+    
+        return;
+      }
+  
+      const { data } = await axios.put(`http://localhost:3000/comment/updateDislike/${id}`, null, {
+        headers: { Authorization: localStorage.getItem('token') },
+        withCredentials: true,
+      });
       fetchComments();
+      setdisLikedCommentIds([...dislikedCommentIds, id]); // Agregar el ID del comentario al estado local de comentarios con dfislike
     } catch (err) {
       console.error(err);
     }
@@ -147,7 +167,7 @@ export const ComentaryTable = () => {
               cols={30}
               rows={5}
               className="form3-control"
-              defaultValue={updatedDescription || ''}
+
               value={updatedDescription}
               onChange={(e) => setUpdatedDescription(e.target.value)}
             />
