@@ -3,7 +3,7 @@ import { Comentary } from './Comentary';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+import Swal from 'sweetalert2'
 
 export const ComentaryTable = () => {
   const [comentary, setComentary] = useState([]);
@@ -28,10 +28,10 @@ export const ComentaryTable = () => {
         foro: foro._id,
       };
       const { data } = await axios.post('http://localhost:3000/comment/add', comment, { headers });
-      alert(data.message);
+      Swal.fire('Your work has been saved', data.message, 'success')
       fetchComments(); // Llama a la función fetchComments para obtener los comentarios actualizados
     } catch (err) {
-      alert(err.response.data.message);
+      Swal.fire('Oops...', err.response.data.message, 'error')
     }
   };
 
@@ -47,20 +47,34 @@ export const ComentaryTable = () => {
       console.error('Error al actualizar el comentario:', error);
     }
   };
-  
-  
+
+
   const deleteComentary = async (id) => {
     try {
-        let confirmDelete = confirm('Are you sure to delete this account?')
-        if (confirmDelete) {
-            const { data } = await axios.delete(`http://localhost:3000/comment/delete/${id}`,{headers})
-            fetchComments()
-            alert('Deleted Sucessfully')
+      Swal.fire({
+        title: 'Are you sure to delete this product',
+        icon: 'warning',
+        showConfirmButton: true,
+        showDenyButton: true,
+      }).then(async (confirmDelete) => {
+        if (confirmDelete.isConfirmed) {
+          const { data } = await axios.delete(`http://localhost:3000/comment/delete/${id}`, { headers }).catch(
+            (err) => {
+              Swal.fire('Oops...', err.message.data.message, 'error')
+            })
+          fetchComments()
+          Swal.fire(`${data.message}`, '', 'success')
+        } else {
+          Swal.fire('No warries!', '', 'success')
         }
+      })
+
     } catch (err) {
-        console.error(err)
+      console.log(err)
+      Swal.fire('Oops...', err.response.data.message, 'error')
     }
-}
+
+  }
 
 
 
@@ -86,33 +100,33 @@ export const ComentaryTable = () => {
   };
 
 
-const addLike = async (id) => {
-  try {
-    // Verificar si el comentario ya ha sido dado like
-    if (likedCommentIds.includes(id)) {
-  
-      return;
-    }
+  const addLike = async (id) => {
+    try {
+      // Verificar si el comentario ya ha sido dado like
+      if (likedCommentIds.includes(id)) {
 
-    const { data } = await axios.put(`http://localhost:3000/comment/updateLike/${id}`, null, {
-      headers: { Authorization: localStorage.getItem('token') },
-      withCredentials: true,
-    });
-    fetchComments();
-    setLikedCommentIds([...likedCommentIds, id]); // Agregar el ID del comentario al estado local de comentarios con like
-  } catch (err) {
-    console.error(err);
-  }
-};
+        return;
+      }
+
+      const { data } = await axios.put(`http://localhost:3000/comment/updateLike/${id}`, null, {
+        headers: { Authorization: localStorage.getItem('token') },
+        withCredentials: true,
+      });
+      fetchComments();
+      setLikedCommentIds([...likedCommentIds, id]); // Agregar el ID del comentario al estado local de comentarios con like
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   const addDislike = async (id) => {
     try {
       // Verificar si el comentario ya ha sido dado dislike
       if (dislikedCommentIds.includes(id)) {
-    
+
         return;
       }
-  
+
       const { data } = await axios.put(`http://localhost:3000/comment/updateDislike/${id}`, null, {
         headers: { Authorization: localStorage.getItem('token') },
         withCredentials: true,
@@ -134,51 +148,98 @@ const addLike = async (id) => {
   }, [comentary]);
 
   return (
-    <div className="main">
-      <main className="comentaries">
-        <h1>{foro.name}</h1>
-      {comentary.map(({ _id, name, description, like, dislike, fecha, user }) => (
-  <Comentary
-    key={_id}
-    _id={_id}
-    name={name}
-    description={description}
-    addLike={() => addLike(_id)} // Llamar a la función addLike pasando el ID del comentario
-    dislike={dislike}
-    addDislike={() => addDislike(_id)}
-    fecha={fecha}
-    user={user}
-    like={like}
-    eliminar={() => deleteComentary(_id)}
-    updatedDescription={updatedDescription}
-    setUpdatedDescription={setUpdatedDescription}
-    update={(commentId, updatedDescription) => updateComment(commentId, updatedDescription)}
-    fetchComments={fetchComments}
-  />
-))}
-      </main>
-      <div className="form3-container">
-        <form className='form-MainCLass'>
-          <div className="form3-group">
-            <h4 className='NameUser'>Leave a comment</h4>
-            <textarea
-              name="msg"
-              id="description"
-              cols={30}
-              rows={5}
-              className="form3-control"
 
-              value={updatedDescription}
-              onChange={(e) => setUpdatedDescription(e.target.value)}
+    <div className="container mt-5">
+      <div className="row  d-flex justify-content-center">
+        <div className="col-md-8">
+          <div className="headings d-flex justify-content-between align-items-center mb-3">
+            <h1>{foro.name}</h1>
+            <div className="buttons">
+              <span className="badge bg-white d-flex flex-row align-items-center">
+                <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Send message
+                </button>
+
+                <div
+                  className="modal fade"
+                  id="exampleModal"
+                  tabIndex={-1}
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h1 className="modal-title fs-5" id="exampleModalLabel">
+                          Post a Comment
+                        </h1>
+
+                        <button
+                          type="button"
+                          className="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        />
+                      </div>
+                      <div className="modal-body">
+                        <form>
+                          <div className="mb-3">
+
+                            <textarea
+                              className="form-control"
+                              id="description"
+
+                              value={updatedDescription}
+                              onChange={(e) => setUpdatedDescription(e.target.value)}
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div className="modal-footer">
+                        <button
+                          type="button"
+                          className="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" className="btn btn-primary" onClick={add}>
+                          Send message
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </span>
+            </div>
+          </div>
+          {comentary.map(({ _id, name, description, like, dislike, fecha, user }) => (
+            <Comentary
+              key={_id}
+              _id={_id}
+              name={name}
+              description={description}
+              addLike={() => addLike(_id)}
+              dislike={dislike}
+              addDislike={() => addDislike(_id)}
+              fecha={fecha}
+              user={user}
+              like={like}
+              eliminar={() => deleteComentary(_id)}
+              updatedDescription={updatedDescription}
+              setUpdatedDescription={setUpdatedDescription}
+              update={(commentId, updatedDescription) => updateComment(commentId, updatedDescription)}
+              fetchComments={fetchComments}
             />
-          </div>
-          <div className="form3-group">
-            <button type="button" id="post" className="btn" onClick={add}>
-              Post Comment
-            </button>
-          </div>
-        </form>
+          ))}
+
+
+        </div>
       </div>
     </div>
+
+
+
   );
 };
